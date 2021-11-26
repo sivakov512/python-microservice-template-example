@@ -1,0 +1,10 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/sivakov512/python-microservice-template-example
+  pullPolicy: IfNotPresent
+  tag: ""
+
+imagePullSecrets: []
+
+POSTGRES_URL: "dummy"
