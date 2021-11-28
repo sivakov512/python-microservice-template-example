@@ -22,7 +22,7 @@ WORKDIR /usr/local/lib/example
 COPY . .
 
 RUN poetry install --no-dev \
-	&& find . -name "*.proto" | xargs -I {} python -m grpc_tools.protoc -I . --python_out=. --grpc_python_out=. {}
+	&& find proto -name "*.proto" | xargs -I {} python -m grpc_tools.protoc -I proto --python_out=. --grpc_python_out=. {}
 
 
 CMD ["example"]
